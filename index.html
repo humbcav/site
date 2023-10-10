@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Humberto Gomide Cavalari">
-    <title>Dicas de programação</title>
-    <link rel="stylesheet" type="text/css" href="./css/menu.css" />
-    <link rel="stylesheet" type="text/css" href="./css/titulo.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Humberto Gomide Cavalari">
+<title>Dicas de programação</title>
+<link rel="stylesheet" type="text/css" href="./css/menu.css" />
 </head>
 <body>
-    <h2>HumbCav - Programação</h2>
-    <br>
+    
 
-    <div id="divMenu">
-        <nav>
-            <ul class="menu">
-                <li><a href="./csharp/csharpindex.html">C#</a></li>
-                    <!--<ul>
-                        <li><a href="#">sub 1 c#</a></li>
-                    </ul>-->
-                <li><a href="./java/javaindex.html">Java</a></li>
-                    <!-- <ul>
-                        <li><a href="#">sub 1 java</a></li>
-                    </ul> -->
-                <li><a href="./javascript/javascriptindex.html">JavaScript</a></li>
-                    <!--<ul>
-                        <li><a href="#">sub 1 javascript</a></li>
-                    </ul> -->
-                <li><a href="./python/pythonindex.html">Python</a></li>
-                    <!-- <ul>
-                        <li><a href="#">sub 1 python</a></li>
-                    </ul> -->
-            </ul>
-        </nav>
+<!--Menu-->    
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">C# 
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="#Createcsvfile">Create .csv file</a>
     </div>
-    <br/><br/><br/>
-    <div id="divPagina">Página principal</div>
+  </div>
+  <a href="#javascript">JavaScript</a>
+  <div class="dropdown">
+    <button class="dropbtn">Java 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#javaArrays">Arrays</a>
+      <a href="#javaStatic">Static / Non Static</a>
+      <a href="#javaCollections">Collections</a>
+    </div>
+  </div> 
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Título conteúdo</h2>
+  <p>conteúdo</p>
+  
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
 </body>
 </html>
