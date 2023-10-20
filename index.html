@@ -5,19 +5,22 @@
 <meta name="author" content="Humberto Gomide Cavalari">
 <title>Dicas de programação</title>
 <link rel="stylesheet" type="text/css" href="./css/menu.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
 </head>
 <body>
     
 
 <!--Menu-->    
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
+  <a href="#" onclick="alteraIframeSrc('entrada.html'); return false;" class="active">Home</a>
   <div class="dropdown">
     <button class="dropbtn">C# 
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-        <a href="#Createcsvfile">Create .csv file</a>
+        <a href="#" onclick="alteraIframeSrc('./csharp/createcsvfile.html'); return false;">Create .csv file</a>
     </div>
   </div>
   <a href="#javascript">JavaScript</a>
@@ -35,20 +38,25 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<div style="padding-left:16px">
-  <h2>Título conteúdo</h2>
-  <p>conteúdo</p>
-  
-</div>
+<iframe id="conteudoIframe" src="entrada.html" width="100%" height="500"></iframe>
 
 <script>
-function myFunction() {
+function myFunction() 
+{
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  if (x.className === "topnav") 
+  {
     x.className += " responsive";
-  } else {
+  } else 
+  {
     x.className = "topnav";
   }
+}
+
+function alteraIframeSrc(pagina)
+{
+  var iframe = document.getElementById("conteudoIframe");
+  iframe.src = pagina;
 }
 </script>
 
